@@ -60,6 +60,15 @@ class Recursion {
 
   //list is constructed with ::  similarly stream is constructed with #::
   def fibFrom(a: Int, b: Int): Stream[Int] = a #:: fibFrom(b, a + b)
+  //scala pattern match
+  def myTest(x: Any) = {
+    x match {
+      case i: Int => "It's integer = " + i
+      case s: String => "It's string = " + s
+      case d: Double => "It's double = " + d
+      case _ => "Oops it is something else"
+    }
+  }
 
 }
 
@@ -90,4 +99,6 @@ object Recursion extends App{
   val fib = r.fibFrom(0,1)
 
   fib.takeWhile( _ < 10) foreach println
+
+  println(r.myTest("Venkatram"))
 }
