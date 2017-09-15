@@ -9,7 +9,8 @@ object DonutTest extends App{
   println(s"Vanilla donut name = ${d.name}")
   println(s"Vanilla donut price = ${d.price}")
   println(s"Vanilla donut price = ${d.productCode}")
-
+  // implicit class AugmentedDonut(donut: Donut), since it is implicit, this
+  //object is create so we can invoke the uuid in the below
   println(s"Vanilla donut price = ${d.uuid}")
 
 }
